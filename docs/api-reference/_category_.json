@@ -1,0 +1,8 @@
+{
+  "label": "API Reference",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore Payflow API endpoints, request parameters, and response examples."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Developer Resources",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore useful resources and tools for working with Payflow APIs."
+  }
+}
