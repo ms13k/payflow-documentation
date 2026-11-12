@@ -1,0 +1,17 @@
+Docusaurus
+GitHub
+Markdown
+MDX
+CODEOWNERS
+VS Code
+npm
+Node.js
+YAML
+frontmatter
+admonition
+admonitions
+sidebar
+sidebars
+swizzle
+lychee
+markdownlint

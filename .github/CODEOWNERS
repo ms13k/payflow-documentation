@@ -1,0 +1,10 @@
+# Each line: path pattern, then one or more owners. The LAST matching pattern wins.
+# Enforced only when branch protection requires "Review from Code Owners".
+# Replace YOUR-ORG and the team names with real GitHub teams (or @usernames).
+
+*                        @YOUR-ORG/docs-team
+/docs/api/               @YOUR-ORG/api-writers
+/.github/                @YOUR-ORG/docs-leads
+/docusaurus.config.js    @YOUR-ORG/docs-leads
+/sidebars.js             @YOUR-ORG/docs-leads
+/src/                    @YOUR-ORG/docs-leads

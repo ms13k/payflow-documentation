@@ -1,0 +1,29 @@
+name: Documentation request
+description: Report a problem or request a change to the docs
+title: "[Docs]: "
+labels: [documentation]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://docs.company.com/docs/...
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of issue is it?
+      options:
+        - Error or outdated information
+        - Missing topic
+        - Unclear or hard to follow
+        - Broken link or image
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should change?
+    validations:
+      required: true

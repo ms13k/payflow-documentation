@@ -1,0 +1,35 @@
+---
+id: custom-html-and-mdx
+title: Custom HTML and MDX
+sidebar_position: 2
+description: Use HTML, JSX, and React components inside documentation pages.
+tags: [customization, mdx]
+---
+
+import Callout from '@site/src/components/Callout';
+
+# Custom HTML and MDX
+
+Pages with the `.mdx` extension can contain HTML-like JSX and React components.
+
+## Rules for inline HTML
+
+- Use `className`, not `class`.
+- Use a style object: `style={{color: 'red'}}`, not a style string.
+- Close every tag: `<br />`, `<img ... />`.
+
+<div className="twt-note-box">
+  This box is plain HTML styled by <code>src/css/custom.css</code>.
+</div>
+
+## Use a reusable component
+
+<Callout title="Reusable component" tone="info">
+  This callout is a React component from <code>src/components/Callout</code>.
+  Reuse it on any <code>.mdx</code> page.
+</Callout>
+
+## Raw HTML files
+
+Files in `static/` are served as-is, without the Docusaurus theme. See the
+[campaign page example](pathname:///campaign-demo.html) for a standalone page.

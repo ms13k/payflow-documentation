@@ -1,0 +1,20 @@
+.callout {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
+}
+
+.info {
+  background: rgba(127, 166, 138, 0.18);
+  border: 1px solid rgba(127, 166, 138, 0.6);
+}
+
+.warn {
+  background: rgba(242, 169, 59, 0.18);
+  border: 1px solid rgba(242, 169, 59, 0.7);
+}
+
+.title {
+  display: block;
+  margin-bottom: 0.25rem;
+}

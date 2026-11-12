@@ -1,0 +1,55 @@
+# ALTERNATIVE to deploy.yml: publish to your company web server.
+# To use: rename to deploy-company-server.yml, delete deploy.yml, add the
+# secrets and variables listed below under Settings > Secrets and variables > Actions.
+#
+#   Secrets:   DEPLOY_HOST, DEPLOY_USER, DEPLOY_KEY (private SSH key), DEPLOY_PATH
+#   Variables: DOCS_URL (e.g. https://docs.company.com), DOCS_BASE_URL (e.g. /)
+#
+# Tip: create a GitHub Environment named "production" with required reviewers.
+# If the server is only reachable from your intranet, use: runs-on: self-hosted
+name: Deploy docs to company server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: company-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+        env:
+          DOCS_URL: ${{ vars.DOCS_URL }}
+          DOCS_BASE_URL: ${{ vars.DOCS_BASE_URL }}
+
+      - name: Upload build over SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+          rsync -avz --delete build/ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}"
+
+      # Other targets: replace the step above with one of these.
+      # AWS S3 + CloudFront:
+      #   aws s3 sync build/ s3://<bucket> --delete
+      #   aws cloudfront create-invalidation --distribution-id <id> --paths "/*"

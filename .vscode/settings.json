@@ -1,0 +1,9 @@
+{
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "markdown.extension.toc.levels": "2..3",
+  "[markdown]": { "editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "off" } },
+  "markdownlint.config": { "extends": ".markdownlint-cli2.jsonc" }
+}

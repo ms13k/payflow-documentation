@@ -1,0 +1,52 @@
+name: PR checks
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint Markdown
+        run: npm run lint:md
+
+      - name: Build site (fails on broken internal links)
+        run: npm run build
+        env:
+          DOCS_URL: https://example.com
+          DOCS_BASE_URL: /
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --accept 200,206,429 'docs/**/*.md' 'docs/**/*.mdx'
+          fail: false # advisory: external sites go down; set true to enforce
+
+  style:
+    name: style (Vale, advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2
+        with:
+          files: docs
+          fail_on_error: false

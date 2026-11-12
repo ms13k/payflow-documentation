@@ -1,0 +1,38 @@
+/* Brand tokens. Change these first; the whole theme follows. */
+:root {
+  --ifm-color-primary: #4c3a8f;
+  --ifm-color-primary-dark: #443482;
+  --ifm-color-primary-darker: #403179;
+  --ifm-color-primary-darkest: #342861;
+  --ifm-color-primary-light: #54419c;
+  --ifm-color-primary-lighter: #5a46a3;
+  --ifm-color-primary-lightest: #6b58b5;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(76, 58, 143, 0.1);
+  --acme-accent: #f2a93b;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #b5a6f0;
+  --ifm-color-primary-dark: #a08ee9;
+  --ifm-color-primary-darker: #957fe6;
+  --ifm-color-primary-darkest: #7a5fdf;
+  --ifm-color-primary-light: #c8bcf4;
+  --ifm-color-primary-lighter: #d3c9f6;
+  --ifm-color-primary-lightest: #ede9fc;
+  --docusaurus-highlighted-code-line-bg: rgba(181, 166, 240, 0.15);
+}
+
+/* Example of a custom class used from MDX: <div className="twt-note-box"> */
+.twt-note-box {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(76, 58, 143, 0.08);
+  border: 1px solid rgba(76, 58, 143, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .twt-note-box {
+  background: rgba(181, 166, 240, 0.12);
+  border-color: rgba(181, 166, 240, 0.35);
+}
