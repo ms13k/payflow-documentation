@@ -119,7 +119,7 @@ A successful request is proposed to return the current details of the specified 
 
 1. Create a new request in Postman and select `GET`.
 2. Enter `https://api.payflow.example/v1/orders/order_7f8a9b2c`.
-3. In **Authorization**, select **Bearer Token** and enter your sample access token.
+3. In **Authorization**, select **Bearer Token** and enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder for this documentation example.
 4. Add `Accept: application/json` in **Headers**.
 5. Select **Send** to submit the request. Because Payflow is a fictional API, the request will not return a live response. Refer to the Response Example JSON section for the expected response format.
 

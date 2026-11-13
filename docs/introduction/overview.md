@@ -25,9 +25,9 @@ Payflow's proposed capabilities include:
 
 Allows businesses to initiate payment transactions by submitting payment details through an API request.
 
-### 2. Payment Retrieval
+### 2. Order Retrieval
 
-Enables applications to retrieve payment information using a unique payment identifier.
+Enables applications to retrieve order information using a unique order identifier.
 
 ### 3. Payment Authorization
 
@@ -73,7 +73,7 @@ Payflow follows a REST-based API architecture that allows applications to commun
 
 The proposed API design follows these principles:
 
-- **HTTP Methods:** Uses standard HTTP methods such as GET, POST, and DELETE to perform API operations.
+- **HTTP Methods:** Uses standard HTTP methods such as GET and POST to perform API operations.
 - **JSON Data Format:** Uses JSON for sending API requests and receiving responses.
 - **Resource-Based Endpoints:** Organizes API endpoints around payment-related resources.
 - **HTTP Status Codes:** Uses standard HTTP status codes to indicate the outcome of API requests.

@@ -31,6 +31,8 @@ Replace `{payment_id}` with the identifier of the payment to capture.
 
 ## Authentication
 
+Include the placeholder access token in the `Authorization` header for documentation examples.
+
 ```http
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json
@@ -48,6 +50,8 @@ Accept: application/json
 | Parameter | Data type | Required/Optional | Description |
 |---|---|---|---|
 | `amount` | integer | Optional | Amount to capture in the smallest currency unit. If omitted, the full authorized amount is captured. It cannot exceed the authorized amount. |
+
+This example demonstrates a full capture. The behavior and resulting payment status for a partial capture are not defined in this documentation.
 
 ## Request Example JSON
 
@@ -125,7 +129,7 @@ A successful request is proposed to return the updated payment with a `captured`
 
 1. Create a new request in Postman and select `POST`.
 2. Enter `https://api.payflow.example/v1/payments/pay_3a6b8c1d/capture`.
-3. In **Authorization**, select **Bearer Token** and enter your sample access token.
+3. In **Authorization**, select **Bearer Token** and enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder.
 4. Add `Content-Type: application/json` and `Accept: application/json` in **Headers**.
 5. In **Body**, select **raw** and choose **JSON**.
 6. Enter the request body shown above.

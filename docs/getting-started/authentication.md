@@ -22,7 +22,7 @@ Include the access token in the `Authorization` header using the following forma
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
 
-Replace `YOUR_ACCESS_TOKEN` with the test access token assigned for your Payflow integration.
+Replace `YOUR_ACCESS_TOKEN` with the access token used in your API request examples. This is a placeholder, not a working credential.
 
 ## Example Request Header
 
@@ -67,7 +67,7 @@ Follow these recommendations when handling API credentials:
 - Keep access tokens confidential.
 - Do not include tokens in publicly accessible source code.
 - Do not commit real credentials to GitHub.
-- Store credentials in an appropriate secret-management solution or environment variable.
+- Store credentials in a secure secret-management solution or environment variable.
 - Use HTTPS when sending API requests.
 - Replace or revoke a token if it is exposed.
 

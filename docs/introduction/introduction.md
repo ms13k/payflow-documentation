@@ -27,9 +27,9 @@ The Payflow documentation is organized into the following sections:
 - **[Introduction](./introduction.md):** Provides an overview of the Payflow platform and its documentation.
 - **[Getting Started](../getting-started/prerequisites.md):** Explains the prerequisites and initial steps required to integrate Payflow.
 - **[API Reference](../api-reference/create-order.md):** Documents API endpoints, request parameters, response structures, and error codes.
-- **[Developer Resources](../developer-resources/command.md):** Provides useful resources for working with Payflow APIs.
 - **[Guides](../guides/payment-integration-workflow.md):** Provides step-by-step instructions for implementing payment workflows.
-- **[Troubleshooting](../troubleshooting/):** Helps developers identify and resolve common integration issues.
+- **[Developer Resources](../developer-resources/commands.md):** Provides useful resources for working with Payflow APIs.
+- **[Troubleshooting](../troubleshooting/common-integration-issues.md):** Helps developers identify and resolve common integration issues.
 
 ## Prerequisites
 

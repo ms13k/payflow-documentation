@@ -143,7 +143,7 @@ A successful request returns a refund resource with an initial `pending` status.
 
 1. Create a new request in Postman and select `POST`.
 2. Enter `https://api.payflow.example/v1/payments/pay_3a6b8c1d/refunds`.
-3. In **Authorization**, select **Bearer Token** and enter your sample access token.
+3. In **Authorization**, select **Bearer Token** and enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder for this documentation example.
 4. Add `Content-Type: application/json` and `Accept: application/json` in **Headers**.
 5. In **Body**, select **raw** and choose **JSON**.
 6. Enter the request body shown above.

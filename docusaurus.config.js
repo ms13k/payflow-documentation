@@ -11,16 +11,16 @@ import {themes as prismThemes} from 'prism-react-renderer';
  * Set the defaults below, or override per environment with DOCS_URL and
  * DOCS_BASE_URL (the deploy workflows do this), so the file never changes.
  */
-const ORG = 'YOUR-ORG';
-const REPO = 'YOUR-REPO';
+const ORG = 'ms13k';
+const REPO = 'payflow-documentation';
 
 const url = process.env.DOCS_URL || `https://${ORG}.github.io`;
 const baseUrl = process.env.DOCS_BASE_URL || `/${REPO}/`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Acme Docs',
-  tagline: 'Docs as code for everyone',
+  title: 'Payflow',
+  tagline: 'Developer documentation for Payflow APIs',
   favicon: 'img/favicon.svg',
 
   url,
@@ -65,8 +65,8 @@ const config = {
   themeConfig: /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
     colorMode: {respectPrefersColorScheme: true},
     navbar: {
-      title: 'Acme Docs',
-      logo: {alt: 'Acme logo', src: 'img/logo.svg'},
+      title: 'Payflow',
+      logo: {alt: 'Payflow logo', src: 'img/logo.svg'},
       items: [
         {type: 'docSidebar', sidebarId: 'mainSidebar', position: 'left', label: 'Docs'},
         {href: `https://github.com/${ORG}/${REPO}`, label: 'GitHub', position: 'right'},
@@ -78,8 +78,10 @@ const config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Getting started', to: '/docs/getting-started/installation'},
-            {label: 'Contribute', to: '/docs/contributing/workflow'},
+            {label: 'Introduction', to: '/docs/introduction'},
+            {label: 'Getting Started', to: '/docs/getting-started/prerequisites'},
+            {label: 'API Reference', to: '/docs/api-reference/create-order'},
+            {label: 'Guides', to: '/docs/guides/payment-integration-workflow'},
           ],
         },
         {
@@ -87,7 +89,7 @@ const config = {
           items: [{label: 'GitHub', href: `https://github.com/${ORG}/${REPO}`}],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Acme Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Payflow. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

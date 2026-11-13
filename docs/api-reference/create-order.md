@@ -29,7 +29,7 @@ Payflow is a fictional payment gateway created for a documentation capstone. The
 
 ## Authentication
 
-Payflow uses bearer token authentication. Include your test access token in the `Authorization` header.
+Payflow uses bearer token authentication. Include the placeholder access token in the `Authorization` header for documentation examples.
 
 ```http
 Authorization: Bearer YOUR_ACCESS_TOKEN
@@ -106,6 +106,8 @@ A successful request returns the details of the newly created order.
 
 ### Response Example JSON
 
+The following example shows the response returned after an order is created successfully.
+
 ```json
 {
   "id": "order_7f8a9b2c",
@@ -159,7 +161,7 @@ The following status codes are proposed for this Payflow endpoint.
 2. Select `POST` as the request method.
 3. Enter `https://api.payflow.example/v1/orders` as the request URL.
 4. Open the **Authorization** tab and select **Bearer Token**.
-5. Enter your sample Payflow access token.
+5. Enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder.
 6. Open the **Headers** tab and add `Content-Type` with the value `application/json`.
 7. Open the **Body** tab, select **raw**, and choose **JSON**.
 8. Enter the request JSON shown in the Request Example JSON section.

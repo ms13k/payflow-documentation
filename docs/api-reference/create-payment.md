@@ -29,7 +29,7 @@ Payflow is a fictional payment gateway created for a documentation capstone. The
 
 ## Authentication
 
-Include your Payflow test access token in the `Authorization` header.
+Include the placeholder access token in the `Authorization` header for documentation examples.
 
 ```http
 Authorization: Bearer YOUR_ACCESS_TOKEN
@@ -88,11 +88,13 @@ A successful request is proposed to return a payment attempt with an initial `pe
 | `amount` | integer | Payment amount in the smallest currency unit. |
 | `currency` | string | Three-letter ISO currency code. |
 | `payment_method` | string | Payment method selected for the attempt. |
-| `reference_id` | string | Merchant-provided reference, if supplied. |
+| `reference_id` | string | Merchant-provided reference for the payment attempt, if supplied in the request. |
 | `status` | string | Payment status. The initial status in this example is `pending`. |
 | `created_at` | integer | Creation time represented as a Unix timestamp. |
 
 ### Response Example JSON
+
+The following example shows an illustrative response after a payment attempt is created successfully.
 
 ```json
 {
@@ -135,7 +137,7 @@ A successful request is proposed to return a payment attempt with an initial `pe
 
 1. Create a new request in Postman and select `POST`.
 2. Enter `https://api.payflow.example/v1/payments`.
-3. In **Authorization**, select **Bearer Token** and enter your sample access token.
+3. In **Authorization**, select **Bearer Token** and enter `YOUR_ACCESS_TOKEN` as a placeholder.
 4. Add `Content-Type: application/json` and `Accept: application/json` in **Headers**.
 5. In **Body**, select **raw** and choose **JSON**.
 6. Enter the request body shown above.

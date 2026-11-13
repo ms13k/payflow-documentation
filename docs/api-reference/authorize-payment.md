@@ -31,7 +31,7 @@ Replace `{payment_id}` with the identifier of the payment you want to authorize.
 
 ## Authentication
 
-Include your Payflow test access token in the `Authorization` header.
+Include the placeholder access token in the `Authorization` header for documentation examples.
 
 ```http
 Authorization: Bearer YOUR_ACCESS_TOKEN
@@ -75,6 +75,8 @@ A successful request is proposed to return the updated payment details with an `
 | `authorized_at` | integer | Time when the payment was authorized, represented as a Unix timestamp. |
 
 ### Response Example JSON
+
+The following example shows the payment details returned after successful authorization.
 
 ```json
 {
@@ -124,7 +126,7 @@ The following status codes are proposed for this Payflow endpoint.
 2. Select `POST` as the request method.
 3. Enter `https://api.payflow.example/v1/payments/pay_3a6b8c1d/authorize` as the request URL.
 4. Open the **Authorization** tab and select **Bearer Token**.
-5. Enter your sample Payflow access token.
+5. Enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder.
 6. Add `Content-Type: application/json` and `Accept: application/json` in the **Headers** tab.
 7. Do not add a request body for this proposed endpoint.
 8. Select **Send** to review the illustrative response format.

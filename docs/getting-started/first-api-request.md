@@ -29,7 +29,7 @@ Use the following endpoint to create an order:
 | Request URL | `https://api.payflow.example/v1/orders` |
 | Content type | `application/json` |
 
-For details about the endpoint and its parameters, see [Create an Order](../reference/create-an-order.md).
+For details about the endpoint and its parameters, see [Create an Order](../api-reference/create-order.md).
 
 ## Request Headers
 
@@ -59,7 +59,7 @@ The following example creates an order for ₹50.00. The `amount` value is expre
 }
 ```
 
-For descriptions of each request field, see the Request Parameters section in [Create an Order](../reference/create-an-order.md).
+For descriptions of each request field, see the Request Parameters section in [Create an Order](../api-reference/create-order.md).
 
 ## Send the Request Using Postman
 
@@ -70,7 +70,7 @@ Follow these steps to prepare the request in Postman:
 3. Enter `https://api.payflow.example/v1/orders` in the request URL field.
 4. Open the **Authorization** tab.
 5. Select **Bearer Token** as the authentication type.
-6. Enter your sample Payflow access token in the token field.
+6. Enter `YOUR_ACCESS_TOKEN` in the token field as a placeholder.
 7. Open the **Headers** tab and add the following headers:
    - `Content-Type`: `application/json`
    - `Accept`: `application/json`
@@ -114,7 +114,7 @@ A successful order-creation request is proposed to return an HTTP `201 Created` 
 - `currency`: Currency used for the order.
 - `status`: Initial order status. In this example, it is `created`.
 
-See [Create an Order](../reference/create-an-order.md) for the complete response parameter table.
+See [Create an Order](../api-reference/create-order.md) for the complete response parameter table.
 
 ## Common Errors
 
@@ -130,4 +130,4 @@ The following are proposed error cases for the fictional Payflow API.
 
 You have reviewed the steps for preparing an order request and the structure of an illustrative response.
 
-Continue to [Create an Order](../reference/create-an-order.md) for detailed endpoint information, request parameters, response fields, and error examples.
+Continue to [Create an Order](../api-reference/create-order.md) for detailed endpoint information, request parameters, response fields, and error examples.

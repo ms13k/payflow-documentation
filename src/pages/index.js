@@ -6,11 +6,19 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
 const features = [
-  {title: 'Write in Markdown', text: 'Plain text files, versioned in Git, edited in any editor.'},
-  {title: 'Review like code', text: 'Pull requests, code owners, and automated checks on every change.'},
-  {title: 'Publish on merge', text: 'GitHub Actions builds and deploys the site automatically.'},
+  {
+    title: 'Easy API Integration',
+    text: 'Follow step-by-step instructions to integrate Payflow APIs into your applications.',
+  },
+  {
+    title: 'Secure Payments',
+    text: 'Learn how to authenticate API requests and manage payment transactions securely.',
+  },
+  {
+    title: 'Developer Resources',
+    text: 'Explore API references, integration guides, payment statuses, and troubleshooting tips.',
+  },
 ];
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -19,8 +27,8 @@ export default function Home() {
         <div className="container">
           <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
           <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
-          <Link className="button button--lg" style={{background: 'var(--acme-accent)', color: '#1f1740'}} to="/docs/intro">
-            Start reading
+          <Link className="button button--lg" style={{background: 'var(--acme-accent)', color: '#1f1740'}} to="/docs/introduction">
+             Let's Start
           </Link>
         </div>
       </header>

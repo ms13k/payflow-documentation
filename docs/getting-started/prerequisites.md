@@ -40,8 +40,7 @@ For this fictional capstone, assume that a developer receives the
 following information during the Payflow account setup process:
 
 -   **API base URL:** `https://api.payflow.example/v1`
--   **Access token:** A sample or test token issued for API
-    authentication.
+- **Access token:** `YOUR_ACCESS_TOKEN` (a placeholder used in documentation examples).
 
 The `.example` domain is reserved for documentation examples. It is not
 a live Payflow service.
@@ -55,8 +54,7 @@ Before sending your first API request, make sure that you:
 1.  Have an API testing tool installed.
 2.  Understand how to create an HTTP request.
 3.  Can add request headers and a JSON request body.
-4.  Have the Payflow API base URL and a valid test access token for the
-    fictional environment.
+4. Understand that the Payflow API base URL and access token shown in this capstone are illustrative examples, not live credentials.
 
 After completing these prerequisites, continue to
 [Authentication](./authentication.md) to learn how to authenticate API

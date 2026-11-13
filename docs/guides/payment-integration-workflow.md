@@ -123,6 +123,6 @@ See [Retrieve an Order](../api-reference/retrieve-order.md).
 
 - [Authentication](../getting-started/authentication.md)
 - [First API Request](../getting-started/first-api-request.md)
-- [API Reference](../api-reference/)
+- [API Reference](../api-reference/create-order.md)
 - [Handling Payment Errors](./handling-payment-errors.md)
 - [Understanding Payment Statuses](./understanding-payment-statuses.md)
